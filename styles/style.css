@@ -1,5 +1,104 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  color: var(--text-color);
+  font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+}
+
+.header {
+  display: grid;
+  margin: 10px;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::before {
+  justify-self: end;
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
+}
+
+.decorated-zone::after {
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+  padding-top: 39px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  row-gap: 10px;
+}
+
+.header__theme-menu-item {
+  display: block;
+  list-style-type: none;
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  border: 1px solid transparent;
+  padding-bottom: 6px;
+  color: var(--button-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: lowercase;
+  background-color: transparent;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--button-color);
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--hover-border-color);
+}
+
+.header__theme-menu-button_active,
+.header__theme-menu-button_active:hover {
+  border: 1px solid var(--button-color);
+  pointer-events: none;
+}
+
+.header__title {
+  padding-top: 67px;
+  color: var(--big-header-text-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  text-shadow: 4px 4px 0px var(--shadow-color);
+}
+
+.header__description {
+  display: block;
+  justify-self: end;
+  max-width: 364px;
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+
+.title-text {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 130%;
+  white-space: pre-line;
+}
+
+.title-decor {
+  color: var(--text-title-decor-color);
+  background-color: var(--accent-color);
 }
