@@ -169,12 +169,12 @@
 
 .section__link:focus,
 .section__link:focus-visible {
-  outline: none;
-  text-decoration: underline;
+  outline: 1px solid var(--text-color);
 }
 
 .section__link:hover {
-  outline: 1px solid var(--text-color);
+  outline: none;
+  text-decoration: underline;
 }
 
 @media(width >= 768px) {
