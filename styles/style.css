@@ -1,15 +1,19 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
+  padding: min(2.6%, 20px);
   color: var(--text-color);
   font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
   background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
-  display: grid;
-  margin: 10px;
   position: relative;
+  display: grid;
+  margin-bottom: 51px;
 }
 
 .decorated-zone::before,
@@ -33,21 +37,34 @@
 
 .rec-decor {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 0;
+  right: 10px;
+  display: var(--display-rec-decor);
   color: var(--decor-color);
-  text-transform: uppercase;
   font-size: 18px;
+  text-transform: uppercase;
+}
+
+.rec-decor::after {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-bottom: 1px;
+  margin-left: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3px 2px var(--decor-color);
+  background-color: var(--decor-color);
 }
 
 .header__theme-menu {
   justify-self: end;
-  padding-top: 39px;
+  padding-top: clamp(39px, -62.1450px + 26.9720vw, 145px);
 }
 
 .header__theme-menu-list {
   display: grid;
-  row-gap: 10px;
+  gap: 10px;
 }
 
 .header__theme-menu-item {
@@ -58,7 +75,7 @@
 .header__theme-menu-button {
   width: 70px;
   border: 1px solid transparent;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   color: var(--button-color);
   font-weight: 400;
   font-size: 18px;
@@ -84,7 +101,7 @@
 }
 
 .header__title {
-  padding-top: 67px;
+  padding-top: clamp(68px, -35.0534px + 27.4809vw, 176px);
   color: var(--big-header-text-color);
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -96,8 +113,9 @@
   display: block;
   justify-self: end;
   max-width: 364px;
-  margin-top: 55px;
-  margin-bottom: 30px;
+  margin-top: clamp(55px, -47.0992px + 27.2265vw, 162px);
+  margin-bottom: clamp(30px, -73.0534px + 27.4809vw, 138px);
+  white-space: pre-line;
 }
 
 .title-text {
@@ -105,7 +123,6 @@
   font-size: 18px;
   font-style: normal;
   line-height: 130%;
-  white-space: pre-line;
 }
 
 .title-decor {
@@ -113,10 +130,66 @@
   background-color: var(--accent-color);
 }
 
-.some-shit {
-  /* width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: var(--decor-color);
-  filter: drop-shadow(0px 0px 4px var(--decor-color)); */
+.section {
+  margin-bottom: 50px;
+}
+
+.section__header {
+  color: var(--section-header-text-color);
+}
+
+.section__list-item {
+  display: block;
+  list-style-type: none;
+}
+
+.section__list-item-header {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.section__list-item-text {
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 130%;
+}
+
+.howto .section__list-item-header:not(.advices) {
+  font-weight: 400;
+}
+
+.section__link {
+  text-decoration: none;
+  text-shadow: 2px 1px var(--link-shadow-color);
+}
+
+@media(width >= 768px) {
+  .header__title {
+    margin-left: -20px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__title {
+    padding-top: clamp(176px, -118.0000px + 38.2813vw, 274px);
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    margin-top: -25px;
+    padding-top: 0;
+  }
+
+  .header__theme-menu-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .header__description {
+    max-width: 491px;
+    margin-top: 114px;
+    margin-bottom: 90px;
+  }
 }
