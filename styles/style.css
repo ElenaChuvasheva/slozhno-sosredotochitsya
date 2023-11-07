@@ -1,5 +1,5 @@
 .page {
-  padding: min(2.6%, 20px);
+  /* padding: min(2.6%, 20px); */
   color: var(--text-color);
   font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
   background-color: var(--bg-color);
@@ -13,6 +13,9 @@
 .header {
   position: relative;
   display: grid;
+  height: 100vh;
+  padding: 10px;
+  align-content: space-between;
 }
 
 .decorated-zone::before,
@@ -36,8 +39,8 @@
 
 .rec-decor {
   position: absolute;
-  top: 0;
-  right: 10px;
+  top: 10px;
+  right: 20px;
   display: var(--display-rec-decor);
   color: var(--decor-color);
   font-size: 18px;
@@ -131,9 +134,11 @@
 
 .main {
   display: grid;
-  gap: 50px;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  /* row-gap: 50px; */
+  row-gap: clamp(50px, 21.3740px + 7.6336vw, 80px);
+  margin: 50px 10px 40px;
+  /* margin-top: 50px;
+  margin-bottom: 40px; */
 }
 
 .section__header {
@@ -179,12 +184,12 @@
 
 @media(width >= 768px) {
   .header__title {
-    margin-left: -20px;
+    /* margin-left: -20px; */
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__title {
-    padding-top: clamp(176px, -118.0000px + 38.2813vw, 274px);
+    /* padding-top: clamp(176px, -118.0000px + 38.2813vw, 274px); */
   }
 }
 
