@@ -13,7 +13,6 @@
 .header {
   position: relative;
   display: grid;
-  margin-bottom: 51px;
 }
 
 .decorated-zone::before,
@@ -59,7 +58,7 @@
 
 .header__theme-menu {
   justify-self: end;
-  padding-top: clamp(39px, -62.1450px + 26.9720vw, 145px);
+  padding-top: clamp(41px, -60.1450px + 26.9720vw, 147px);
 }
 
 .header__theme-menu-list {
@@ -130,8 +129,11 @@
   background-color: var(--accent-color);
 }
 
-.section {
-  margin-bottom: 50px;
+.main {
+  display: grid;
+  gap: 50px;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 .section__header {
@@ -163,6 +165,16 @@
 .section__link {
   text-decoration: none;
   text-shadow: 2px 1px var(--link-shadow-color);
+}
+
+.section__link:focus,
+.section__link:focus-visible {
+  outline: none;
+  text-decoration: underline;
+}
+
+.section__link:hover {
+  outline: 1px solid var(--text-color);
 }
 
 @media(width >= 768px) {
