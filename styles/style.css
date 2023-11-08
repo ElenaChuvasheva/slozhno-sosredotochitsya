@@ -206,7 +206,7 @@
 }
 
 .image {
-  max-width: 100%;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -264,10 +264,14 @@
     height: 100%;
   }
 
+  .pictures .section__header {
+    margin-bottom: 20px;
+  }
+
   .pictures .section__list {
-    gap: 22px;
-    grid-template-columns: repeat(3, 229px);
-    grid-template-rows: repeat(3, auto);
+    gap: 19px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 25vw 30vw 41.4vw;
     grid-template-areas:
     "sunset sunset ice-cream"
     "tape books ice-cream"
@@ -325,5 +329,10 @@
 
   .what .section__list {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .pictures .section__list {
+    gap: 22px;
+    grid-template-rows: 25.4vw 30.7vw 428px;
   }
 }
