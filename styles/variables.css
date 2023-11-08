@@ -17,4 +17,12 @@
   --bg-image: url('../images/cover-image-dark.png');
   --section-header-text-color: #FF0070;
   --link-shadow-color: #FF0070;
+  --menu-margin-top: 1.5vh;
+  --title-margin-top: 5.39vh;
+  --header-description-margin-top: 3.89vh;
+  --header-padding: 10px;
+  --rec-decor-top: 10px;
+  --rec-decor-right: 20px;
+  --main-row-gap: 50px;
+  --header-column-width: 30.73vw;
 }
