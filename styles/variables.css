@@ -5,7 +5,7 @@
 
 :root {
   --bg-color: #000028;
-  --big-header-text-color: #DB00FF;
+  --big-title-text-color: #DB00FF;
   --accent-color: #FF0070;
   --decor-color: #FF0070;
   --button-color: #FF0070;
@@ -20,7 +20,7 @@
   --menu-margin-top: 1.5vh;
   --title-margin-top: 5.39vh;
   --header-description-margin-top: 3.89vh;
-  --header-padding: 10px;
+  --decorated-zone-padding: 10px;
   --rec-decor-top: 10px;
   --rec-decor-right: 20px;
   --main-row-gap: 50px;

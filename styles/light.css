@@ -6,7 +6,7 @@
 
 .page.theme_light {
   --bg-color: #FFF1F7;
-  --big-header-text-color: #FFC2E6;
+  --big-title-text-color: #FFC2E6;
   --accent-color: #FF8DCB;
   --decor-color: #353430;
   --button-color: #353430;
@@ -36,7 +36,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg-color: #FFF1F7;
-    --big-header-text-color: #FFC2E6;
+    --big-title-text-color: #FFC2E6;
     --accent-color: #FF8DCB;
     --decor-color: #353430;
     --button-color: #353430;
