@@ -13,7 +13,7 @@
   position: relative;
   display: grid;
   align-content: space-between;
-  min-height: 100vh;
+  min-block-size: 100vh;
   padding: var(--decorated-zone-padding);
 }
 
@@ -21,20 +21,20 @@
 :is(.header, .footer)::after {
   content: '';
   display: block;
-  width: 25px;
-  height: 25px;
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 :is(.header, .footer)::before {
   justify-self: end;
-  border-top: 1px solid var(--decor-color);
-  border-right: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+  border-inline-end: 1px solid var(--decor-color);
 }
 
 :is(.header, .footer)::after {
   align-self: end;
-  border-bottom: 1px solid var(--decor-color);
-  border-left: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
+  border-inline-start: 1px solid var(--decor-color);
 }
 
 .rec-decor {
@@ -50,10 +50,10 @@
 .rec-decor::after {
   content: '';
   display: inline-block;
-  width: 9px;
-  height: 9px;
-  margin-bottom: 1px;
-  margin-left: 10px;
+  inline-size: 9px;
+  block-size: 9px;
+  margin-block-end: 1px;
+  margin-inline-start: 10px;
   border-radius: 50%;
   box-shadow: 0px 0px 3px 2px var(--decor-color);
   background-color: var(--decor-color);
@@ -61,7 +61,7 @@
 
 .header__theme-menu {
   justify-self: end;
-  margin-top: var(--menu-margin-top);
+  margin-block-start: var(--menu-margin-top);
 }
 
 .header__theme-menu-list {
@@ -75,9 +75,9 @@
 }
 
 .header__theme-menu-button {
-  width: 70px;
+  inline-size: 70px;
   border: 1px solid transparent;
-  padding-bottom: 5px;
+  padding-block-end: 5px;
   color: var(--button-color);
   font-weight: 400;
   font-size: 18px;
@@ -88,7 +88,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--button-color);
+  border-block-end: 1px solid var(--button-color);
   outline: none;
 }
 
@@ -111,14 +111,14 @@
 }
 
 .header__title {
-  margin-top: var(--title-margin-top);
+  margin-block-start: var(--title-margin-top);
 }
 
 .header__description {
   display: block;
   justify-self: end;
-  max-width: 364px;
-  margin-top: var(--header-description-margin-top);
+  max-inline-size: 364px;
+  margin-block-start: var(--header-description-margin-top);
   white-space: pre-line;
 }
 
@@ -145,7 +145,7 @@
 }
 
 .text-content .section__header {
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   color: var(--section-header-text-color);
 }
 
@@ -161,7 +161,7 @@
 
 .section__list-item-header {
   display: block;
-  margin-bottom: 10px;
+  margin-block-end: 10px;
 }
 
 .section__list-item-text {
@@ -176,7 +176,7 @@
 }
 
 .advices-header {
-  margin-bottom: 20px;
+  margin-block-end: 20px;
 }
 
 .section__link {
@@ -199,25 +199,25 @@
 }
 
 .gallery .section__header {
-  margin-bottom: 10px;
+  margin-block-end: 10px;
   color: var(--text-title-decor-color);
 }
 
 .gallery__image {
-  width: 100%;
+  inline-size: 100%;
   object-fit: cover;
 }
 
 .footer {
   display: grid;
   align-content: space-between;
-  min-height: 100vh;
+  min-block-size: 100vh;
   padding: var(--decorated-zone-padding);
 }
 
 .footer__text {
   justify-self: center;
-  margin-left: 4px;
+  margin-inline-start: 4px;
   text-shadow: 2px 2px 0px var(--shadow-color);
 }
 
@@ -233,7 +233,7 @@
   }
 
   .header__title {
-    margin-left: -20px;
+    margin-inline-start: -20px;
   }
 
   .big-title {
@@ -251,7 +251,7 @@
   }
 
   .section-what .section__header {
-    max-width: var(--header-column-width);
+    max-inline-size: var(--header-column-width);
   }
 
   .illustration-sunset {
@@ -275,11 +275,11 @@
   }
 
   .gallery__image {
-    height: 100%;
+    block-size: 100%;
   }
 
   .gallery .section__header {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 
   .gallery .section__list {
@@ -316,7 +316,7 @@
 
   .header__description {
     grid-area: description;
-    max-width: 491px;
+    max-inline-size: 491px;
   }
 
   .header::after {
@@ -351,8 +351,8 @@
 @media (height < 668px) {
   .gallery .section__list,
   .section-what .section__list {
-    grid-template-columns: initial;
-    grid-template-rows: initial;
+    display: flex;
+    flex-direction: column;
   }
 
   .gallery .section__list {
@@ -360,10 +360,6 @@
   }
 
   .gallery__image {
-    max-height: 80vh;
-  }
-
-  .section-what .section__list {
-    gap: 20px;
+    max-block-size: 80vh;
   }
 }
