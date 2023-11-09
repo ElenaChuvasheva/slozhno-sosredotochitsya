@@ -361,8 +361,7 @@
 
 @media (height < 668px) {
   .pictures .section__list,
-  .what .section__list
-   {
+  .what .section__list {
     grid-template-columns: initial;
     grid-template-rows: initial;
   }
