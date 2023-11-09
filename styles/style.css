@@ -291,7 +291,7 @@
     justify-self: center;
   }
 
-  .header .big-title{
+  .header .big-title {
     grid-area: title;
   }
 
