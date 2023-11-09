@@ -21,12 +21,6 @@
 }
 
 @media (prefers-color-scheme: light) {
-
-  @media (width >= 1024px) {
-    :root {
-      --shadow-color: #FF0070;
-    }
-  }
   :root {
     --bg-color: #FFF1F7;
     --big-title-text-color: #FFC2E6;
@@ -41,5 +35,11 @@
     --bg-image: url('../images/cover-image-light.png');
     --section-header-text-color: #353430;
     --link-shadow-color: #FF8DCB;
+  }
+}
+
+@media (prefers-color-scheme: light) and (width >= 1024px) {
+  :root {
+    --shadow-color: #FF0070;
   }
 }
