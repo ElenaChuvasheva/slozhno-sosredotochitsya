@@ -17,21 +17,25 @@
   padding: var(--decorated-zone-padding);
 }
 
-.decorated-zone::before,
-.decorated-zone::after {
+.header::before,
+.header::after,
+.footer::before,
+.footer::after {
   content: '';
   display: block;
   width: 25px;
   height: 25px;
 }
 
-.decorated-zone::before {
+.header::before,
+.footer::before {
   justify-self: end;
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
 }
 
-.decorated-zone::after {
+.header::after,
+.footer::after {
   align-self: end;
   border-bottom: 1px solid var(--decor-color);
   border-left: 1px solid var(--decor-color);
@@ -201,7 +205,7 @@
 }
 
 .pictures .section__list {
-  gap: 5px;
+  gap: 6px;
 }
 
 .pictures .section__header {
@@ -240,6 +244,9 @@
 
   .header__title {
     margin-left: -20px;
+  }
+
+  .big-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
@@ -304,51 +311,38 @@
     --header-description-margin-top: 3.26vh;
   }
 
-  /* .decorated-zone::before {
+  .header::before {
     grid-area: decor-before;
-  } */
-
-  .decorated-zone::before {
-    /* grid-area: decor-before; */
-    /* grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1; */
   }
 
   .header__theme-menu {
-    /* grid-area: menu; */
-    /* grid-column-start: 2;
-    justify-self: start; */
+    grid-area: menu;
+    grid-column-start: 2;
+    justify-self: center;
   }
 
   .header__title {
-    /* grid-area: title; */
-
+    grid-area: title;
   }
 
   .header__description {
-    /* grid-area: description; */
+    grid-area: description;
     max-width: 491px;
   }
 
-  /* .decorated-zone::after {
+  .header::after {
     grid-area: decor-after;
-  } */
+  }
 
   .header {
-    grid-template-columns: repeat(3, fit-content);
-    /* grid-template-rows: repeat(4, fit-content); */
-    /* grid-template-areas:
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, fit-content);
+    grid-template-areas:
     "menu menu decor-before"
     "title title title"
     "description description description"
     "decor-after decor-after decor-after"
-    ; */
-
-  }
-
-  .header__title {
-    margin-top: 55px;
+    ;
   }
 
   .header__theme-menu-list {
@@ -362,5 +356,22 @@
   .pictures .section__list {
     grid-template-rows: 25.4vw 30.7vw 428px;
     gap: 22px;
+  }
+}
+
+@media (height < 668px) {
+  .pictures .section__list,
+  .what .section__list
+   {
+    grid-template-columns: initial;
+    grid-template-rows: initial;
+  }
+
+  .pictures .section__list {
+    gap: 10px;
+  }
+
+  .what .section__list {
+    gap: 20px;
   }
 }
