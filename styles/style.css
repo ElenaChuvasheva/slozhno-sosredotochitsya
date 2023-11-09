@@ -111,7 +111,7 @@
   text-shadow: 4px 4px 0px var(--shadow-color);
 }
 
-.header__title {
+.header .big-title {
   margin-block-start: var(--title-margin-top);
 }
 
@@ -168,11 +168,11 @@
   line-height: 130%;
 }
 
-.section-howto .section__list-item-header:not(.advices-header) {
+.section-howto h3.section__list-item-header {
   font-weight: 400;
 }
 
-.advices-header {
+.section-howto .section__list-item-header:not(h3) {
   margin-block-end: 20px;
 }
 
@@ -212,14 +212,14 @@
   min-block-size: 100vh;
 }
 
-.footer__text {
+.footer .big-title {
   justify-self: center;
   margin-inline-start: 4px;
   text-shadow: 2px 2px 0px var(--shadow-color);
 }
 
 @media(width >= 768px) {
-  .header__title {
+  .header .big-title {
     margin-inline-start: -20px;
   }
 
@@ -291,7 +291,7 @@
     justify-self: center;
   }
 
-  .header__title {
+  .header .big-title{
     grid-area: title;
   }
 
