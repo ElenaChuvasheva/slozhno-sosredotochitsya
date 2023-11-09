@@ -20,6 +20,17 @@
   --rec-decor-right: 20px;
   --main-row-gap: 50px;
   --header-column-width: 30.73vw;
+  --decorated-zone-height: 100vh;
+  --main-font-size: 18px;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  --decor-size: 25px;
+  --standard-gap: 10px;
+  --big-gap: 20px;
+  --font-family: 'IBM Plex mono', Arial, Helvetica, sans-serif;
+  --big-line-height: 130%;
+  --mid-line-height: 100%;
+  --small-line-height: 82.5%;
 }
 
 @media(width >= 768px) {
