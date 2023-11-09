@@ -84,6 +84,7 @@
   text-align: center;
   text-transform: lowercase;
   background-color: transparent;
+  cursor: pointer;
   inline-size: 70px;
 }
 
@@ -153,12 +154,10 @@
 }
 
 .section__list-item {
-  display: block;
   list-style-type: none;
 }
 
 .section__list-item-header {
-  display: block;
   margin-block-end: 10px;
 }
 
@@ -220,16 +219,6 @@
 }
 
 @media(width >= 768px) {
-  :root {
-    --menu-margin-top: 0.88vh;
-    --title-margin-top: 3.42vh;
-    --header-description-margin-top: 2.44vh;
-    --decorated-zone-padding: 20px;
-    --rec-decor-top: 20px;
-    --rec-decor-right: 30px;
-    --main-row-gap: 80px;
-  }
-
   .header__title {
     margin-inline-start: -20px;
   }
@@ -293,12 +282,6 @@
 }
 
 @media (width >= 1024px) or (height < 668px) {
-  :root {
-    --menu-margin-top: 0;
-    --title-margin-top: 24.09vh;
-    --header-description-margin-top: 3.26vh;
-  }
-
   .header::before {
     grid-area: decor-before;
   }
