@@ -1,6 +1,6 @@
 .page {
   color: var(--text-color);
-  font-family: var(--font-family);
+  font-family: var(--font), Arial, Helvetica, sans-serif;
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-repeat: no-repeat;
