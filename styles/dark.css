@@ -2,14 +2,11 @@
   --bg-color: #000028;
   --big-title-text-color: #DB00FF;
   --accent-color: #FF0070;
-  --decor-color: #FF0070;
-  --button-color: #FF0070;
-  --shadow-color: #FF0070;
+  --decor-color: var(--accent-color);
+  --shadow-color: var(--accent-color);
   --text-color: #F1B2CE;
-  --text-title-decor-color: #000028;
+  --text-title-decor-color: var(--bg-color);
   --hover-border-color: rgba(255, 0, 112, 0.40);
   --display-rec-decor: block;
   --bg-image: url('../images/cover-image-dark.png');
-  --section-header-text-color: #FF0070;
-  --link-shadow-color: #FF0070;
 }
